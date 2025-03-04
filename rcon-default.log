@@ -1,0 +1,129 @@
+[2025-02-24 16:11:30] 0.0.0.0:25575: a
+Unknown or incomplete command, see below for errora<--[HERE]
+
+[2025-02-24 16:11:30] 0.0.0.0:25575: b
+Unknown or incomplete command, see below for errorb<--[HERE]
+
+[2025-02-24 16:11:30] 0.0.0.0:25575: c
+Unknown or incomplete command, see below for errorc<--[HERE]
+
+[2025-02-24 16:12:02] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-24 16:16:07] 0.0.0.0:25575: say SERVER SHUTTING DOWN IN 10 SECONDS...
+
+
+[2025-02-24 16:16:07] 0.0.0.0:25575: save-all
+Saving the game (this may take a moment!)Saved the game
+
+[2025-02-24 16:16:17] 0.0.0.0:25575: stop
+Stopping the server
+
+[2025-02-24 16:17:51] 0.0.0.0:25575: say SERVER SHUTTING DOWN IN 10 SECONDS...
+
+
+[2025-02-24 16:17:51] 0.0.0.0:25575: save-all
+Saving the game (this may take a moment!)Saved the game
+
+[2025-02-24 16:18:02] 0.0.0.0:25575: stop
+Stopping the server
+
+[2025-02-24 16:27:49] 0.0.0.0:25575: say SERVER SHUTTING DOWN IN 10 SECONDS...
+
+
+[2025-02-24 16:27:49] 0.0.0.0:25575: save-all
+Saving the game (this may take a moment!)Saved the game
+
+[2025-02-24 16:27:59] 0.0.0.0:25575: stop
+Stopping the server
+
+[2025-02-24 16:38:57] 0.0.0.0:25575: say SERVER SHUTTING DOWN IN 10 SECONDS...
+
+
+[2025-02-24 16:38:57] 0.0.0.0:25575: save-all
+Saving the game (this may take a moment!)Saved the game
+
+[2025-02-24 16:39:07] 0.0.0.0:25575: stop
+Stopping the server
+
+[2025-02-24 16:46:21] 0.0.0.0:25575: help
+/advancement (grant|revoke)/attribute <target> <attribute> (get|base|modifier)/execute (run|if|unless|as|at|store|positioned|rotated|facing|align|anchored|in|summon|on)/bossbar (add|remove|list|set|get)/clear [<targets>]/clone (<begin>|from)/damage <target> <amount> [<damageType>]/data (merge|get|remove|modify)/datapack (enable|disable|list)/debug (start|stop|function)/defaultgamemode <gamemode>/difficulty [peaceful|easy|normal|hard]/effect (clear|give)/me <action>/enchant <targets> <enchantment> [<level>]/experience (add|set|query)/xp -> experience/fill <from> <to> <block> [replace|keep|outline|hollow|destroy]/fillbiome <from> <to> <biome> [replace]/forceload (add|remove|query)/function <name> [<arguments>|with]/gamemode <gamemode> [<target>]/gamerule (announceAdvancements|blockExplosionDropDecay|commandBlockOutput|commandModificationBlockLimit|disableElytraMovementCheck|disablePlayerMovementCheck|disableRaids|doDaylightCycle|doEntityDrops|doFireTick|doImmediateRespawn|doInsomnia|doLimitedCrafting|doMobLoot|doMobSpawning|doPatrolSpawning|doTileDrops|doTraderSpawning|doVinesSpread|doWardenSpawning|doWeatherCycle|drowningDamage|enderPearlsVanishOnDeath|fallDamage|fireDamage|forgiveDeadPlayers|freezeDamage|globalSoundEvents|keepInventory|lavaSourceConversion|logAdminCommands|maxCommandChainLength|maxCommandForkCount|maxEntityCramming|mobExplosionDropDecay|mobGriefing|naturalRegeneration|playersNetherPortalCreativeDelay|playersNetherPortalDefaultDelay|playersSleepingPercentage|projectilesCanBreakBlocks|randomTickSpeed|reducedDebugInfo|sendCommandFeedback|showDeathMessages|snowAccumulationHeight|spawnChunkRadius|spawnRadius|spectatorsGenerateChunks|tntExplosionDropDecay|universalAnger|universal_graves:breaking_time|universal_graves:protection_time|waterSourceConversion)/give <targets> <item> [<count>]/help [<command>]/item (replace|modify)/kick <targets> [<reason>]/kill [<targets>]/list [uuids]/locate (structure|biome|poi)/loot (replace|insert|give|spawn)/msg <targets> <message>/tell -> msg/w -> msg/particle <name> [<pos>]/place (feature|jigsaw|structure|template)/playsound <sound> [master|music|record|weather|block|hostile|neutral|player|ambient|voice]/random (value|roll|reset)/reload/recipe (give|take)/return (<value>|fail|run)/ride <target> (mount|dismount)/rotate <target> (<rotation>|facing)/say <message>/schedule (function|clear)/scoreboard (objectives|players)/seed/setblock <pos> <block> [destroy|keep|replace]/spawnpoint [<targets>]/setworldspawn [<pos>]/spectate [<target>]/spreadplayers <center> <spreadDistance> <maxRange> (<respectTeams>|under)/stopsound <targets> [*|master|music|record|weather|block|hostile|neutral|player|ambient|voice]/summon <entity> [<pos>]/tag <targets> (add|remove|list)/team (list|add|remove|empty|join|leave|modify)/teammsg <message>/tm -> teammsg/teleport (<location>|<destination>|<targets>)/tp -> teleport/tellraw <targets> <message>/tick (query|rate|step|sprint|unfreeze|freeze)/time (set|add|query)/title <targets> (clear|reset|title|subtitle|actionbar|times)/trigger <objective> [add|set]/weather (clear|rain|thunder)/worldborder (add|set|center|damage|get|warning)/jfr (start|stop)/ban-ip <target> [<reason>]/banlist [ips|players]/ban <targets> [<reason>]/deop <targets>/op <targets>/pardon <targets>/pardon-ip <target>/perf (start|stop)/save-all [flush]/save-off/save-on/setidletimeout <minutes>/stop/transfer <hostname> [<port>]/whitelist (on|off|list|add|remove|reload)/tb (access|remove|clear|restore|unpack)/graves [modify|player|all|about|reload]/carpet [list|removeDefault|setDefault|<rule>]/profile [health|entities]/log [clear|<log name>]/spawn (list|tracking|test|mocking|rates|mobcaps|entities)/player <player> (stop|use|jump|attack|drop|dropStack|swapHands|hotbar|kill|shadow|mount|dismount|sneak|unsneak|sprint|unsprint|look|turn|move|spawn)/info block <block position> [grep]/distance (from|to)/perimeterinfo [<center position>]/draw (sphere|ball|diamond|pyramid|cone|cylinder|cuboid)/script (globals|resume|stop|run|invoke|invokepoint|invokearea|scan|fill|outline|load|unload|event|download|remove
+
+[2025-02-24 16:47:13] 0.0.0.0:25575: save
+Unknown or incomplete command, see below for errorsave<--[HERE]
+
+[2025-02-24 16:47:16] 0.0.0.0:25575: save-all
+Saving the game (this may take a moment!)Saved the game
+
+[2025-02-24 17:00:28] 0.0.0.0:25575: say SERVER SHUTTING DOWN IN 10 SECONDS...
+
+
+[2025-02-24 17:00:28] 0.0.0.0:25575: save-all
+Saving the game (this may take a moment!)Saved the game
+
+[2025-02-24 17:00:38] 0.0.0.0:25575: stop
+Stopping the server
+
+[2025-02-24 17:13:21] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-24 17:19:03] 0.0.0.0:25575: help
+/advancement (grant|revoke)/attribute <target> <attribute> (get|base|modifier)/execute (run|if|unless|as|at|store|positioned|rotated|facing|align|anchored|in|summon|on)/bossbar (add|remove|list|set|get)/clear [<targets>]/clone (<begin>|from)/damage <target> <amount> [<damageType>]/data (merge|get|remove|modify)/datapack (enable|disable|list)/debug (start|stop|function)/defaultgamemode <gamemode>/difficulty [peaceful|easy|normal|hard]/effect (clear|give)/me <action>/enchant <targets> <enchantment> [<level>]/experience (add|set|query)/xp -> experience/fill <from> <to> <block> [replace|keep|outline|hollow|destroy]/fillbiome <from> <to> <biome> [replace]/forceload (add|remove|query)/function <name> [<arguments>|with]/gamemode <gamemode> [<target>]/gamerule (announceAdvancements|blockExplosionDropDecay|commandBlockOutput|commandModificationBlockLimit|disableElytraMovementCheck|disablePlayerMovementCheck|disableRaids|doDaylightCycle|doEntityDrops|doFireTick|doImmediateRespawn|doInsomnia|doLimitedCrafting|doMobLoot|doMobSpawning|doPatrolSpawning|doTileDrops|doTraderSpawning|doVinesSpread|doWardenSpawning|doWeatherCycle|drowningDamage|enderPearlsVanishOnDeath|fallDamage|fireDamage|forgiveDeadPlayers|freezeDamage|globalSoundEvents|keepInventory|lavaSourceConversion|logAdminCommands|maxCommandChainLength|maxCommandForkCount|maxEntityCramming|mobExplosionDropDecay|mobGriefing|naturalRegeneration|playersNetherPortalCreativeDelay|playersNetherPortalDefaultDelay|playersSleepingPercentage|projectilesCanBreakBlocks|randomTickSpeed|reducedDebugInfo|sendCommandFeedback|showDeathMessages|snowAccumulationHeight|spawnChunkRadius|spawnRadius|spectatorsGenerateChunks|tntExplosionDropDecay|universalAnger|universal_graves:breaking_time|universal_graves:protection_time|waterSourceConversion)/give <targets> <item> [<count>]/help [<command>]/item (replace|modify)/kick <targets> [<reason>]/kill [<targets>]/list [uuids]/locate (structure|biome|poi)/loot (replace|insert|give|spawn)/msg <targets> <message>/tell -> msg/w -> msg/particle <name> [<pos>]/place (feature|jigsaw|structure|template)/playsound <sound> [master|music|record|weather|block|hostile|neutral|player|ambient|voice]/random (value|roll|reset)/reload/recipe (give|take)/return (<value>|fail|run)/ride <target> (mount|dismount)/rotate <target> (<rotation>|facing)/say <message>/schedule (function|clear)/scoreboard (objectives|players)/seed/setblock <pos> <block> [destroy|keep|replace]/spawnpoint [<targets>]/setworldspawn [<pos>]/spectate [<target>]/spreadplayers <center> <spreadDistance> <maxRange> (<respectTeams>|under)/stopsound <targets> [*|master|music|record|weather|block|hostile|neutral|player|ambient|voice]/summon <entity> [<pos>]/tag <targets> (add|remove|list)/team (list|add|remove|empty|join|leave|modify)/teammsg <message>/tm -> teammsg/teleport (<location>|<destination>|<targets>)/tp -> teleport/tellraw <targets> <message>/tick (query|rate|step|sprint|unfreeze|freeze)/time (set|add|query)/title <targets> (clear|reset|title|subtitle|actionbar|times)/trigger <objective> [add|set]/weather (clear|rain|thunder)/worldborder (add|set|center|damage|get|warning)/jfr (start|stop)/ban-ip <target> [<reason>]/banlist [ips|players]/ban <targets> [<reason>]/deop <targets>/op <targets>/pardon <targets>/pardon-ip <target>/perf (start|stop)/save-all [flush]/save-off/save-on/setidletimeout <minutes>/stop/transfer <hostname> [<port>]/whitelist (on|off|list|add|remove|reload)/tb (access|remove|clear|restore|unpack)/graves [modify|player|all|about|reload]/carpet [list|removeDefault|setDefault|<rule>]/profile [health|entities]/log [clear|<log name>]/spawn (list|tracking|test|mocking|rates|mobcaps|entities)/player <player> (stop|use|jump|attack|drop|dropStack|swapHands|hotbar|kill|shadow|mount|dismount|sneak|unsneak|sprint|unsprint|look|turn|move|spawn)/info block <block position> [grep]/distance (from|to)/perimeterinfo [<center position>]/draw (sphere|ball|diamond|pyramid|cone|cylinder|cuboid)/script (globals|resume|stop|run|invoke|invokepoint|invokearea|scan|fill|outline|load|unload|event|download|remove
+
+[2025-02-24 18:10:06] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-24 21:08:52] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-24 21:09:01] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-24 21:22:21] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-24 22:00:34] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-24 22:00:38] 0.0.0.0:25575: say
+Unknown or incomplete command, see below for errorsay<--[HERE]
+
+[2025-02-24 22:00:38] 0.0.0.0:25575: HELLO
+Unknown or incomplete command, see below for errorHELLO<--[HERE]
+
+[2025-02-24 22:00:38] 0.0.0.0:25575: EVERYONE!
+Unknown or incomplete command, see below for errorEVERYONE!<--[HERE]
+
+[2025-02-24 22:00:41] 0.0.0.0:25575: say HELLO EVERYONE!
+
+
+[2025-02-24 22:01:12] 0.0.0.0:25575: say HELLO EVERYONE!
+
+
+[2025-02-24 22:01:19] 0.0.0.0:25575: say IT ME!!!!
+
+
+[2025-02-24 22:01:22] 0.0.0.0:25575: list
+There are 1 of a max of 10 players online: llemonllemur
+
+[2025-02-24 22:01:50] 0.0.0.0:25575: say ['llemonllemur']
+
+
+[2025-02-24 22:01:56] 0.0.0.0:25575: say JavaStatusResponse(players=JavaStatusPlayers(online=1, max=10, sample=[JavaStatusPlayer(name='llemonllemur', id='1657adce-cf1a-40ab-9e36-a468ff774bf5')]), version=JavaStatusVersion(name='1.21.4', protocol=769), motd=Motd(parsed=['A Minecraft Server'], raw='A Minecraft Server', bedrock=False), latency=3.489657989121042, raw={'version': {'name': '1.21.4', 'protocol': 769}, 'enforcesSecureChat': True, 'description': 'A Minecraft Server', 'players': {'max': 10, 'online': 1, 'sample': [{'id': '1657adce-cf1a-40ab-9e36-a468ff774bf5', 'name': 'llemonllemur'}]}}, enforces_secure_chat=True, icon=None)
+Chat message was too long (598 > maximum 256 characters)
+
+[2025-02-24 22:02:03] 0.0.0.0:25575: say {'hostname': 'A Minecraft Server', 'gametype': 'SMP', 'game_id': 'MINECRAFT', 'version': '1.21.4', 'plugins': '', 'map': 'TheNeighborhood2', 'numplayers': '1', 'maxplayers': '10', 'hostport': '25565', 'hostip': '127.0.1.1'}
+
+
+[2025-02-25 20:42:43] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-25 20:45:19] 0.0.0.0:25575: say hi
+
+
+[2025-02-25 20:45:27] 0.0.0.0:25575: list
+There are 0 of a max of 10 players online:
+
+[2025-02-26 20:39:19] 0.0.0.0:25575: seed
+Seed: [6092546719630991561]
+
