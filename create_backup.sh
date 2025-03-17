@@ -22,9 +22,9 @@ create_backup() {
 
 # TODO: Note whether Minecraft is already running. If not, don't restart at the end.
 echo "Stopping Minecraft to create a backup..."
-sudo systemctl stop minecraft-server.service
+sudo /usr/bin/systemctl stop minecraft-server.service
 
 create_backup
 
 echo "Restarting Minecraft..."
-sudo systemctl start minecraft-server.service
+sudo /usr/bin/systemctl start minecraft-server.service

@@ -99,7 +99,7 @@ def stop_minecraft_server() -> None:
     """Gracefully stop the Minecraft server."""
     logging.info("Stopping the Minecraft server.")
     subprocess.run(
-        ["/usr/bin/systemctl", "stop", "minecraft-server.service"],
+        ["sudo", "/usr/bin/systemctl", "stop", "minecraft-server.service"],
         check=True,
     )
 
@@ -108,7 +108,7 @@ def start_minecraft_server() -> None:
     """Start the Minecraft server back up."""
     logging.info("Starting the Minecraft server.")
     subprocess.run(
-        ["/usr/bin/systemctl", "start", "minecraft-server.service"],
+        ["sudo", "/usr/bin/systemctl", "start", "minecraft-server.service"],
         check=True,
     )
 
