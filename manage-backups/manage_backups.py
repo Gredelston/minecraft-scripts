@@ -51,6 +51,19 @@ class BackupFile:
         return self.is_older_than_dt(datetime.datetime.now() - abs(delta))
 
 
+def setup_logging() -> None:
+    """Setup basic logging."""
+    logs_dir = pathlib.Path("/srv/minecraft/backups/logs/")
+    logfile_name = datetime.datetime.now().strftime("%Y%m%d-%H%M%S.log")
+    logfile_path = logs_dir / logfile_name
+    logging.basicConfig(
+        level=logging.INFO,
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler(logfile_path),
+        ],
+    )
+
 def get_backup_files(root_dir: pathlib.Path) -> list[BackupFile]:
     """Return the backup files in root_dir (non-recursively)."""
     backup_names = glob.glob("**/*.tar.gz", root_dir=root_dir, recursive=True)
@@ -126,10 +139,16 @@ def create_new_backups() -> None:
     """Create new daily, weekly, and monthly backups as needed."""
     if needs_daily_backup():
         create_backup(BACKUPS_DAILY)
+    else:
+        logging.info("No daily backup needed.")
     if needs_weekly_backup():
         create_backup(BACKUPS_WEEKLY)
+    else:
+        logging.info("No weekly backup needed.")
     if needs_monthly_backup():
         create_backup(BACKUPS_MONTHLY)
+    else:
+        logging.info("No monthly backup needed.")
 
 
 def delete_backups_older_than_delta(
@@ -151,7 +170,7 @@ def delete_old_backups() -> None:
 
 def main() -> None:
     """Create new backups, and delete old backups."""
-    logging.basicConfig(level=logging.INFO)
+    setup_logging()
     create_new_backups()
     delete_old_backups()
 
