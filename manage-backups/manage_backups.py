@@ -23,6 +23,7 @@ BACKUPS_MONTHLY = BACKUPS_DIR / "monthly"
 @dataclasses.dataclass
 class BackupFile:
     """An archive that exists on the filesystem."""
+
     path: pathlib.Path
 
     def get_mtime(self) -> datetime.timedelta:
