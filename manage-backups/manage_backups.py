@@ -111,7 +111,7 @@ def create_backup(parent_dir: pathlib.Path) -> BackupFile:
     """Create a new backup file in parent_dir."""
     stop_minecraft_server()
     backup_path = pathlib.Path(parent_dir / get_new_backup_filename())
-    logging.info(f"Creating backup file: {backup_path}")
+    logging.info("Creating backup file: %s", backup_path)
     subprocess.run(
         ["tar", "-czhf", str(backup_path), "/srv/minecraft/current"],
         check=True,
@@ -137,7 +137,7 @@ def delete_backups_older_than_delta(
 ) -> None:
     """Delete any backups in parent_dir older than delta."""
     for backup_file in get_backup_files(parent_dir):
-        if backup_file.is_older_than(delta):
+        if backup_file.is_older_than_delta(delta):
             backup_file.path.unlink()
 
 
