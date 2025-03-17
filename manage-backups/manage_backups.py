@@ -4,8 +4,6 @@
 
 This script is expected to be run on a daily cronjob, but it's OK to run it
 manually, too.
-
-TODO: Currently the `tar` command requires `sudo`. Fix that.
 """
 
 import dataclasses
@@ -113,10 +111,12 @@ def create_backup(parent_dir: pathlib.Path) -> BackupFile:
     """Create a new backup file in parent_dir."""
     stop_minecraft_server()
     backup_path = pathlib.Path(parent_dir / get_new_backup_filename())
+    logging.info(f"Creating backup file: {backup_path}")
     subprocess.run(
         ["tar", "-czhf", str(backup_path), "/srv/minecraft/current"],
         check=True,
     )
+    # TODO: Don't start the server if it didn't need stopping.
     start_minecraft_server()
     return BackupFile(backup_path)
 
@@ -150,6 +150,7 @@ def delete_old_backups() -> None:
 
 def main() -> None:
     """Create new backups, and delete old backups."""
+    logging.basicConfig(level=logging.INFO)
     create_new_backups()
     delete_old_backups()
 
