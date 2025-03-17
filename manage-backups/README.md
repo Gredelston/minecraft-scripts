@@ -9,3 +9,13 @@
 	%minecraft-admins ALL=(root) NOPASSWD: /usr/bin/systemctl start minecraft-server.service
 	%minecraft-admins ALL=(root) NOPASSWD: /usr/bin/systemctl stop minecraft-server.service
 	```
+
+## Automating the script
+
+Open the service account's crontab via `sudo crontab -u $SERVICE_ACCOUNT -e`, and add the following line (or similar):
+
+	```
+	0 3 * * * /srv/minecraft/scripts/manage-backups/manage_backups.py
+	```
+
+The above line will run the script every day at 3:00 AM.
