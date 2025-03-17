@@ -5,10 +5,6 @@
 This script is expected to be run on a daily cronjob, but it's OK to run it
 manually, too.
 
-TODO: In order for the service account to stop/start the service, we need to
-make the service a user service rather than a system service.
-https://serverfault.com/a/841150
-
 TODO: Currently the `tar` command requires `sudo`. Fix that.
 """
 
