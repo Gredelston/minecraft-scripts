@@ -64,6 +64,7 @@ def setup_logging() -> None:
         ],
     )
 
+
 def get_backup_files(root_dir: pathlib.Path) -> list[BackupFile]:
     """Return the backup files in root_dir (non-recursively)."""
     backup_names = glob.glob("**/*.tar.gz", root_dir=root_dir, recursive=True)
@@ -158,6 +159,12 @@ def delete_backups_older_than_delta(
     """Delete any backups in parent_dir older than delta."""
     for backup_file in get_backup_files(parent_dir):
         if backup_file.is_older_than_delta(delta):
+            logging.info(
+                "Deleting old backup %s (mtime %s is older than %s)",
+                backup_file.path,
+                backup_file.get_mtime(),
+                delta,
+            )
             backup_file.path.unlink()
 
 
