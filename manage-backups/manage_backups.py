@@ -11,6 +11,7 @@ import datetime
 import glob
 import logging
 import pathlib
+import re
 import subprocess
 
 # Where to find backup files.
@@ -99,9 +100,53 @@ def needs_monthly_backup() -> bool:
     return all(backup.is_older_than_delta(max_age) for backup in monthly_backups)
 
 
-def get_new_backup_filename() -> str:
+def get_new_backup_filename(gametime: str | None) -> str:
     """Return the name for a new backup file."""
-    return datetime.datetime.now().strftime("backup-%Y%m%d-%H%M%S.tar.gz")
+    now = datetime.datetime.now()
+    if gametime:
+        return now.strftime(f"backup-%Y%m%d-%H%M%S-g{gametime}.tar.gz")
+    return now.strftime("backup-%Y%m%d-%H%M%S.tar.gz")
+
+
+def get_minecraft_gametime() -> str | None:
+    """Return the current Minecraft gametime as a string, or None.
+
+    This function is provided as a best-effort convenience. The command to get
+    the server's game time may be different depending on your server setup.
+    For example, you may need to use a different `rcon` client, or you may
+    need to run this command as a different user.
+
+    This function assumes that the command
+    `/srv/minecraft/scripts/rcon.sh 'time query gametime'` will print a string
+    like "The time is 12345" to stdout.
+    """
+    try:
+        # Note: This command is just an example. You may need to modify it to
+        # suit your server's setup.
+        result = subprocess.run(
+            ["/srv/minecraft/scripts/rcon.sh", "time query gametime"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        output = result.stdout.strip()
+        # The regex is intentionally a little fuzzy, to accommodate small
+        # changes in the command's output format.
+        match = re.search(r"(\d+)", output)
+        if match:
+            return match.group(1)
+        logging.warning("Could not parse gametime from: %s", output)
+        return None
+    except FileNotFoundError:
+        logging.warning(
+            "`/srv/minecraft/scripts/rcon.sh` not found. Is it installed and in"
+            " your PATH?"
+        )
+        return None
+    except subprocess.CalledProcessError as e:
+        logging.warning("Error getting gametime: %s", e)
+        return None
+
 
 
 def stop_minecraft_server() -> None:
@@ -124,8 +169,9 @@ def start_minecraft_server() -> None:
 
 def create_backup(parent_dir: pathlib.Path) -> BackupFile:
     """Create a new backup file in parent_dir."""
+    gametime = get_minecraft_gametime()
     stop_minecraft_server()
-    backup_path = pathlib.Path(parent_dir / get_new_backup_filename())
+    backup_path = pathlib.Path(parent_dir / get_new_backup_filename(gametime))
     logging.info("Creating backup file: %s", backup_path)
     subprocess.run(
         ["tar", "-czhf", str(backup_path), "/srv/minecraft/current"],
