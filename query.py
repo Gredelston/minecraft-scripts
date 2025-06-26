@@ -1,5 +1,7 @@
 #!/srv/minecraft/scripts/mcstatus.venv/bin/python3
 
+"""Retrieve basic info from the server's query port."""
+
 import argparse
 import enum
 
